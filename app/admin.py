@@ -17,3 +17,4 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 
 admin.site.register(BlogImages)
+admin.site.register(Persona)

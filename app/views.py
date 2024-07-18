@@ -13,6 +13,7 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['category'] = Category.objects.all()
+        persona = Persona.load()
         posts = Post.objects.filter(status='published')
         posts_with_first_image = []
         for post in posts:
@@ -21,7 +22,7 @@ class HomeView(TemplateView):
                 'post': post,
                 'first_image': first_image
             })
-        
+        context['persona'] = persona
         context['posts_with_first_image'] = posts_with_first_image
         return context
     
@@ -42,6 +43,7 @@ class ContactView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['persona'] = Persona.load()
         
         return context
     
@@ -49,7 +51,7 @@ class ContactView(TemplateView):
         name = request.POST.get('name')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
-        email = 'ameerk10fw@gmail.com'
+        email = 'mybabymyhero2@gmail.com'
 
         form_data = {
             'name' : name,
