@@ -59,7 +59,10 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 
 # Database configuration
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        engine='django.db.backends.postgresql'
+    )
 }
 
 # Password validation
