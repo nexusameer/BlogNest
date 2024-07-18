@@ -50,7 +50,7 @@ class Post(models.Model):
     tags = models.CharField(max_length=100, blank=True, null=True)
     amazon_link = models.URLField(max_length=200, null=True, blank=True)
     images = models.ManyToManyField(BlogImages)
-    
+    video = models.FileField(upload_to='post_videos/', blank=True, null=True)    
 
     class Meta:
         ordering = ('-created_at',)

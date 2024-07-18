@@ -700,7 +700,7 @@ ul.page-numbers li a:hover {
 	height: 50px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;
@@ -858,7 +858,7 @@ footer p a:hover {
 
 .contact-us .sidebar-heading h2 {
 	font-size: 18px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-weight: 900;
 	letter-spacing: 0.5px;
 	color: #20232e;
@@ -872,7 +872,7 @@ footer p a:hover {
 	height: 46px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;
@@ -885,7 +885,7 @@ footer p a:hover {
 	height: 46px;
 	border: 1px solid #eee;
 	font-size: 13px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-weight: 500;
 	color: #7a7a7a;
 	outline: none;
