@@ -1,48 +1,79 @@
 # BlogNest
 
-BlogNest is a scalable and modular blogging platform built with [NestJS](https://nestjs.com/).
+BlogNest is a feature-rich blogging platform built using [Django](https://www.djangoproject.com/).
 
 ## Features
 
-- Modular structure for posts, users, and comments
-- RESTful API endpoints
-- Authentication and authorization
-- TypeORM integration
-- Easy to extend with new modules
+- User authentication (registration, login, logout)
+- Create, edit, and delete blog posts
+- Commenting system
+- Categories and tags for posts
+- Responsive design
+- Admin dashboard for managing content
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18+ recommended)
-- npm or yarn
+- Python 3.9+
+- pip
+- (Optional) Virtualenv
 
 ### Installation
 
-```bash
-npm install
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/nexusameer/BlogNest.git
+   cd BlogNest
+   ```
 
-### Running the Application
+2. **Create and activate a virtual environment (optional but recommended)**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-```bash
-npm run start:dev
-```
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Building for Production
+4. **Apply migrations**
+   ```bash
+   python manage.py migrate
+   ```
 
-```bash
-npm run build
-npm run start:prod
-```
+5. **Create a superuser (admin)**
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+6. **Run the development server**
+   ```bash
+   python manage.py runserver
+   ```
+
+7. **Access the application**
+   - Blog: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+   - Admin: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
 ## Project Structure
 
 ```
-src/
-  modules/
-    posts/
-    users/
-    comments/
-  main.ts
+BlogNest/
+├── blog/           # Main blog app
+├── users/          # User authentication and profiles
+├── BlogNest/       # Project settings
+├── templates/      # HTML templates
+├── static/         # Static files (CSS, JS, images)
+├── manage.py
+└── requirements.txt
 ```
+
+## Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](LICENSE)
